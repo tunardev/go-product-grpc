@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package example;
 
-option go_package = "github.com/tunardev/go-product-service/pb";
+option go_package = "github.com/tunardev/go-product-grpc/pb";
 
 message Product {
   int32 id = 1;
