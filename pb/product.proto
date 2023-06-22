@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package example;
+
+option go_package = "github.com/tunardev/go-product-service/pb";
+
+message Product {
+  int32 id = 1;
+  string name = 2;
+  float price = 3;
+  string brand = 4;
+}
+
+service ProductService {
+  rpc GetProduct(Product) returns (Product);
+}
