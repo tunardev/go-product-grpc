@@ -38,8 +38,8 @@ func main() {
 
 	// // Register the service implementation to the gRPC server
 	pb.RegisterProductServiceServer(grpcServer, &productServiceServer{})
+	fmt.Println("gRPC server started on port 50051")
 	if err := grpcServer.Serve(lis); err != nil {
 		panic(err)
 	}
-	fmt.Println("gRPC server started on port 50051")
 }
